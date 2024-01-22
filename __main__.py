@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import re
+import json
 
 __author__ = "Eryk Darnowski"
 __version__ = "0.0.0"
@@ -12,6 +13,7 @@ def is_sender(string):
 
 def main():
     input_filename = "transcript.txt"
+    output_filename = "output.jsonl"
     config = {
         "role": "system",
         "content": "Jestem Marek, chat bot bazowany na wiadomościach z Messengera, który ma na celu imitować chat z tą osobą.",
@@ -58,6 +60,13 @@ def main():
         if (not curr_is_sender and is_sender(transcript[i + 1])):
             convo_list.append(convo)
             convo = { "messages": [ config ] }
+
+
+    # write output
+    with open(output_filename, 'w', encoding='utf-8') as output_file:
+        for convo in convo_list:
+            json.dump(convo, output_file, ensure_ascii=False)
+            output_file.write('\n')
 
 
 if __name__ == "__main__":
