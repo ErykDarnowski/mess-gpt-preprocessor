@@ -58,7 +58,8 @@ def main():
 
         # making sure that the convo won't start with an answer to a non existant prompt
         if (not curr_is_sender and is_sender(transcript[i + 1])):
-            convo_list.append(convo)
+            if (len(convo["messages"]) > 1):
+                convo_list.append(convo)
             convo = { "messages": [ config ] }
 
 
