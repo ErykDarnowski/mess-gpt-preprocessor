@@ -6,7 +6,10 @@ __license__ = "MIT"
 
 
 def main():
-    print("hello world")
+    input_filename = "transcript.txt"
+    # read the input file contents
+    with open(input_filename, "r", encoding="utf-8") as input_file:
+        transcript = input_file.read()
 
 
 if __name__ == "__main__":
