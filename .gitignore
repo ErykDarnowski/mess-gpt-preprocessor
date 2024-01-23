@@ -1,6 +1,6 @@
 # I/O files:
 transcript.txt
-output.jsonl
+output.*
 
 # ---
 
