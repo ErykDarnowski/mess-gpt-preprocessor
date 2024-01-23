@@ -23,7 +23,7 @@ def main():
             "(Przekazano wiadomość|przekazuje wiadomość)",
             "(C|c)ofn(ięto|ęła)\swys(y)?łanie\swiadomości",
             "Załącznik niedostępnyTen załącznik mógł zostać usunięty lub",
-            "(Odpowiedziałeś(aś)\s|Oryginalna wiadomość:|Użytkownik  odpisał Ci|odpowiedział)",
+            "(Odpowiedziałeś\(aś\)\s|Oryginalna wiadomość:|Użytkownik  odpisał Ci|odpowiedział)",
             "^(|\s+)$",
         ]
 
